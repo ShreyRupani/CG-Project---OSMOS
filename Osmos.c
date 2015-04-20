@@ -39,25 +39,41 @@ void ModifyPlayer(int x, int y)
 	player[2] += x;
 	player[1] += y;
 	player[3] += y;
-	display();
 }
 
 void MovePlayer(unsigned char key, int x, int y)
 {
 	switch(key)
 	{
+		case '4':
 		case 'a':
-			ModifyPlayer(-10,0);
+			ModifyPlayer(-20,0);
 			break;
+		case '6':
 		case 'd':
-			ModifyPlayer(10,0);
+			ModifyPlayer(20,0);
 			break;
+		case '8':
 		case 'w':
-			ModifyPlayer(0,10);
+			ModifyPlayer(0,20);
 			break;
+		case '2':
 		case 's':
-			ModifyPlayer(0,-10);
+			ModifyPlayer(0,-20);
 			break;
+		case '7':
+			ModifyPlayer(-20,20);
+			break;
+		case '9':
+			ModifyPlayer(20,20);
+			break;
+		case '1':
+			ModifyPlayer(-20,-20);
+			break;
+		case '3':
+			ModifyPlayer(20,-20);
+			break;
+
 		default:
 			break;
 	}
@@ -68,7 +84,7 @@ void InitialiseOthers()
 	int i, sizebox;
 	for(i = 0; i < MAX; i++)
 	{
-		sizebox = (rand() % 70) + 30;
+		sizebox = (rand() % 30) + 30;
 		others[i][0] = rand() % 750;
 		others[i][1] = rand() % 750;
 		others[i][2] = others[i][0] + sizebox;
@@ -154,7 +170,6 @@ void ModifyOthers()
 				case 5:
 					others[i][4] = 7;
 					break;
-					break;
 				default:
 					break;
 			}
@@ -172,7 +187,6 @@ void ModifyOthers()
 					break;
 				case 7:
 					others[i][4] = 1;
-					break;
 					break;
 				default:
 					break;
@@ -192,7 +206,6 @@ void ModifyOthers()
 				case 7:
 					others[i][4] = 5;
 					break;
-					break;
 				default:
 					break;
 			}
@@ -211,13 +224,12 @@ void ModifyOthers()
 				case 3:
 					others[i][4] = 5;
 					break;
-					break;
 				default:
 					break;
 			}
 		}
 	}
-	display();
+//	display();
 }
 
 
@@ -243,6 +255,7 @@ int main(int argc, char **argv)
 	glutDisplayFunc(display);
 	glutKeyboardFunc(MovePlayer);
 	myinit();
+	glutIdleFunc(display);
 	glutMainLoop();
 	return 0;
 }
