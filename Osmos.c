@@ -1,41 +1,3 @@
-
-Conversation opened. 1 read message.
-
-Skip to content
-Using Gmail with screen readers
-Shrey
- 
- 
-More 
-1 of 11
- 
-Osmos
-Inbox
-	x
-Ritvik Gautam
-	
-Attachments10:53 PM (0 minutes ago)
-		
-to me
---
-Ritvik Gautam
-Attachments area
-Preview attachment Osmos.c
-[C]
-	
-Click here to Reply or Forward
-3.75 GB (24%) of 15 GB used
-Manage
-Terms - Privacy
-Last account activity: in 2 minutes
-Details
-	
-	
-Ritvik Gautam's profile photo
-	Ritvik Gautam
-Show details
-Osmos.c
-
 #include<GL/glut.h>
 #include<stdio.h>
 #include<stdlib.h>
@@ -402,5 +364,3 @@ int main(int argc, char **argv)
 	glutMainLoop();
 	return 0;
 }
-
-Displaying Osmos.c.
